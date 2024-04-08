@@ -8,7 +8,7 @@ return {
 	},
 	config = function()
 		-- vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal right<CR>", {})
-        vim.keymap.set("n", "<C-b>", ":Neotree toggle right<CR>", {})
-	    vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
-    end,
+		vim.keymap.set("n", "<C-b>", ":Neotree toggle right<CR>", {})
+		vim.keymap.set("n", "<leader>bf", ":Neotree buffers reveal float<CR>", {})
+	end,
 }

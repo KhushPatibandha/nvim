@@ -24,7 +24,16 @@ vim.keymap.set("v", "<C-up>", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "n", "nzzzv")
 
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+--keymap.set("i", "<C-Backspace>", "<C-w>")
+--keymap.set("c", "<C-Backspace>", "<C-w>")
+vim.keymap.set("i", "<C-H>", "<C-w>")
+vim.keymap.set("c", "<C-H>", "<C-w>")
+
+vim.keymap.set("n", "<C-a>", "gg0VG$")
+vim.keymap.set("i", "<C-a>", "<ESC>gg0VG$")
+
