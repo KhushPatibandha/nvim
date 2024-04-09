@@ -37,3 +37,5 @@ vim.keymap.set("c", "<C-H>", "<C-w>")
 vim.keymap.set("n", "<C-a>", "gg0VG$")
 vim.keymap.set("i", "<C-a>", "<ESC>gg0VG$")
 
+
+
