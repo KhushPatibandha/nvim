@@ -11,8 +11,8 @@ vim.opt.undodir = os.getenv("HOME") .. "/.config/nvim/undodir"
 vim.opt.undofile = true
 
 vim.opt.guicursor = ""
-vim.opt.wrap = true
 vim.opt.scrolloff = 15
+vim.opt.wrap = false
 
 vim.opt.hlsearch = true -- :noh to clear
 vim.opt.incsearch = true
@@ -45,3 +45,13 @@ vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format({async = false})]])
 -- Ctrl + Backspace to remove previous word
 vim.keymap.set("i", "<C-H>", "<C-w>")
 vim.keymap.set("c", "<C-H>", "<C-w>")
+
+-- Wrap and unwrap lines
+vim.keymap.set("n", "<A-z>", ":lua WrapOrUnwrap()<CR>")
+function WrapOrUnwrap()
+    if vim.opt.wrap:get() then
+        vim.opt.wrap = false
+    else
+        vim.opt.wrap = true
+    end
+end
