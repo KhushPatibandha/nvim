@@ -3,7 +3,19 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
-vim.cmd("set number")
+
+---------------relative line numbers---------------
+vim.cmd("set number relativenumber")
+function ToggleNumber()
+	if vim.wo.relativenumber then
+		vim.cmd("set norelativenumber")
+	else
+		vim.cmd("set relativenumber")
+	end
+end
+
+vim.api.nvim_set_keymap("n", "<leader>\\", ":lua ToggleNumber()<CR>", { noremap = true, silent = true })
+--------------------------------------------------
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -71,3 +83,25 @@ vim.keymap.set({ "n", "i", "v" }, "<C-l>", goto_line)
 --   -> ] to traverse next matches
 --   -> [ to traverse previous matches
 -- ctrl-up and ctrl-down in normal mode to swap multiple cursor up or down
+
+----------------------------------------------- Lessons -----------------------------------------------
+
+-- Lesson On Horizontal Movement
+-- viw -> select the word
+-- f 'x' -> find the next 'x' characters
+-- F 'x' -> find the previous 'x' characters
+-- vi 'parenthesis' -> select inside the parenthesis
+-- va 'parenthesis' -> select inside of the parenthesis and the parenthesis
+-- yi 'parenthesis' -> yank inside the parenthesis
+-- ya 'parenthesis' -> yank inside the parenthesis and the parenthesis
+-- ci 'parenthesis' -> change inside the parenthesis
+-- ca 'parenthesis' -> change inside the parenthesis and the parenthesis
+-- di 'parenthesis' -> delete inside the parenthesis
+-- da 'parenthesis' -> delete inside the parenthesis and the parenthesis
+-- o -> move to the other end of the selection
+-- vip -> select the paragraph
+-- vap -> select the paragraph including the white spaces
+-- yap -> contiguously select and yank the paragraph including all the white space at the end and above
+-- yip -> contiguously select and yank the paragraph but not the white space at the end and above
+-- dip -> contiguously select and delete the paragraph but not the white space at the end and above
+-- dap -> contiguously select and delete the paragraph including the white space at the end and above
