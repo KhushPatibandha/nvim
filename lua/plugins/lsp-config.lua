@@ -40,10 +40,10 @@ return {
 			lspconfig.tsserver.setup({ capabilities = capabilities })
 			lspconfig.pyright.setup({ capabilities = capabilities })
 
-			vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "sd", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
+			vim.keymap.set("n", "<Leader>gD", vim.lsp.buf.declaration, {})
+			vim.keymap.set("n", "<Leader>gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "<Leader>sd", vim.lsp.buf.hover, {})
+			vim.keymap.set("n", "<Leader>gi", vim.lsp.buf.implementation, {})
 			vim.keymap.set({ "n", "v" }, "<Leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
