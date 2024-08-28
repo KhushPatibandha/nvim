@@ -1,1 +1,1 @@
-vim.cmd('colorscheme base16-brogrammer')
+vim.cmd('colorscheme retrobox')
