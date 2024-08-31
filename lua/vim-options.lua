@@ -13,11 +13,11 @@ vim.opt.listchars:append("tab:» ")
 ---------------relative line numbers---------------
 vim.cmd("set number relativenumber")
 function ToggleNumber()
-	if vim.wo.relativenumber then
-		vim.cmd("set norelativenumber")
-	else
-		vim.cmd("set relativenumber")
-	end
+    if vim.wo.relativenumber then
+        vim.cmd("set norelativenumber")
+    else
+        vim.cmd("set relativenumber")
+    end
 end
 
 vim.api.nvim_set_keymap("n", "<leader>\\", ":lua ToggleNumber()<CR>", { noremap = true, silent = true })
@@ -64,19 +64,19 @@ vim.keymap.set("i", "<C-H>", "<C-w>")
 -- Wrap and unwrap lines
 vim.keymap.set("n", "<A-z>", ":lua WrapOrUnwrap()<CR>")
 function WrapOrUnwrap()
-	if vim.opt.wrap:get() then
-		vim.opt.wrap = false
-	else
-		vim.opt.wrap = true
-	end
+    if vim.opt.wrap:get() then
+        vim.opt.wrap = false
+    else
+        vim.opt.wrap = true
+    end
 end
 
 -- Goto line
 local function goto_line()
-	local line = vim.fn.input("Goto line: ")
-	if line ~= "" then
-		vim.cmd(":" .. line)
-	end
+    local line = vim.fn.input("Goto line: ")
+    if line ~= "" then
+        vim.cmd(":" .. line)
+    end
 end
 vim.keymap.set({ "n", "i", "v" }, "<C-l>", goto_line)
 
