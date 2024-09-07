@@ -64,7 +64,7 @@ vim.keymap.set("x", "<Leader>p", '"_dP')
 vim.keymap.set(
     "n",
     "<leader>s",
-    ":s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
+    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
     { desc = "Search and replace current word under cursor in current file" }
 )
 
