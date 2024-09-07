@@ -39,6 +39,6 @@ return {
             end,
         })
 
-        vim.keymap.set("n", "<Leader>gf", vim.lsp.buf.format, {})
+        vim.keymap.set("n", "<Leader>gf", vim.lsp.buf.format, { desc = "Format file" })
     end,
 }

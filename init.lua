@@ -14,6 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 require("vim-options")
 require("lazy").setup("plugins")
 
+vim.cmd("Copilot disable")
+
 -- Load colorscheme if the file exists
 local colorscheme_file = vim.fn.stdpath("config") .. "/colorscheme.lua"
 if vim.loop.fs_stat(colorscheme_file) then
