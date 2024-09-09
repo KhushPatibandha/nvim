@@ -24,8 +24,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({
-                -- TODO: update tsserver to ts_ls
-                ensure_installed = { "lua_ls", "gopls", "tsserver", "pyright" },
+                ensure_installed = { "lua_ls", "gopls", "ts_ls", "pyright" },
             })
         end,
     },

@@ -8,7 +8,7 @@ vim.opt.list = true
 vim.opt.listchars:append("space:·")
 vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("trail:·")
-vim.opt.listchars:append("tab:» ")
+vim.opt.listchars:append("tab:▏ ")
 vim.opt.listchars:append("nbsp:␣")
 
 ---------------relative line numbers---------------
@@ -44,8 +44,9 @@ vim.opt.guicursor = ""
 vim.opt.scrolloff = 15
 vim.opt.wrap = false
 
-vim.opt.hlsearch = false -- :noh to clear
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
