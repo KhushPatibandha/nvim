@@ -1,5 +1,8 @@
 return {
     {
+        "mfussenegger/nvim-jdtls",
+    },
+    {
         "williamboman/mason.nvim",
         config = function()
             require("mason").setup()
