@@ -1,1 +1,1 @@
-vim.cmd('colorscheme base16-tokyo-city-terminal-light')
+vim.cmd('colorscheme base16-catppuccin-frappe')
