@@ -18,7 +18,10 @@ return {
                     "golangci-lint",
                     "gomodifytags",
                     "impl",
-                    "gofumpt", -- An enhanced version of gofmt
+                    "gofumpt",
+                    "mypy",
+                    "ruff",
+                    "black",
                 },
             })
         end,
