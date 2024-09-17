@@ -1,1 +1,1 @@
-vim.cmd('colorscheme base16-catppuccin-frappe')
+vim.cmd('colorscheme base16-rose-pine-moon')

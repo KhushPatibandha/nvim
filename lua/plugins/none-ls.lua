@@ -14,6 +14,7 @@ return {
                 null_ls.builtins.formatting.prettier,
                 null_ls.builtins.diagnostics.mypy,
                 null_ls.builtins.formatting.black,
+                require("none-ls.formatting.rustfmt"),
                 require("none-ls.diagnostics.ruff"),
                 null_ls.builtins.completion.spell.with({
                     filetypes = { "text", "markdown" },
