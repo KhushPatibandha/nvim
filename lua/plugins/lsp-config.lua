@@ -22,6 +22,7 @@ return {
                     "mypy",
                     "ruff",
                     "black",
+                    "rust-analyzer",
                 },
             })
         end,
@@ -46,6 +47,12 @@ return {
             lspconfig.gopls.setup({ capabilities = capabilities })
             lspconfig.ts_ls.setup({ capabilities = capabilities })
             lspconfig.pyright.setup({ capabilities = capabilities })
+            lspconfig.rust_analyzer.setup({
+                capabilities = capabilities,
+                filetypes = { "rust" },
+                root_dir = lspconfig.util.root_pattern("Cargo.toml"),
+                settings = { ["rust-analyzer"] = { cargo = { allFeatures = true } } },
+            })
 
             -- vim.keymap.set(
             --     "n",
