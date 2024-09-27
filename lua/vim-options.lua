@@ -53,10 +53,10 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnos
 vim.keymap.set("n", "<Leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic error message" })
 vim.keymap.set("n", "<Leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic quickfix" })
 
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, desc = "Move focus to the right window" })
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, desc = "Move focus to the lower window" })
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, desc = "Move focus to the upper window" })
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, desc = "Move focus to the left window" })
+-- vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, desc = "Move focus to the right window" })
+-- vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, desc = "Move focus to the lower window" })
+-- vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, desc = "Move focus to the upper window" })
+-- vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, desc = "Move focus to the left window" })
 
 vim.keymap.set("v", "<C-down>", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "<C-up>", ":m '<-2<CR>gv=gv")

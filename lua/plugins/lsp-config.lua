@@ -44,7 +44,19 @@ return {
 
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({ capabilities = capabilities })
-            lspconfig.gopls.setup({ capabilities = capabilities })
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+                cmd = { "gopls" },
+                filetypes = { "go", "gomod", "gowork", "gotmpl" },
+                root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+                settings = {
+                    gopls = {
+                        completeUnimported = true,
+                        usePlaceholders = true,
+                        analyses = { unusedparams = true, unreachable = true },
+                    },
+                },
+            })
             lspconfig.ts_ls.setup({ capabilities = capabilities })
             lspconfig.pyright.setup({ capabilities = capabilities })
             lspconfig.rust_analyzer.setup({
