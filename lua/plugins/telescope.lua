@@ -18,7 +18,7 @@ return {
                 builtin.grep_string,
                 { desc = "Grep current string under cursor in whole project" }
             )
-            vim.keymap.set("n", "<Leader>fb", builtin.buffers, { desc = "List open buffers" })
+            vim.keymap.set("n", "<Leader><Leader>", builtin.buffers, { desc = "List open buffers" })
             vim.keymap.set(
                 "n",
                 "<Leader>tt",
