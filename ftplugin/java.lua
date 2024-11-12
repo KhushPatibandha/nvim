@@ -1,12 +1,12 @@
+local jdtls = require("jdtls")
+
 local config = {
-    cmd = { vim.fn.expand("~/.local/share/nvim/mason/bin/jdtls") },
-    -- cmd = {'/path/to/jdt-language-server/bin/jdtls'},
+    cmd = { "/run/current-system/sw/bin/jdtls" },
     root_dir = vim.fs.dirname(vim.fs.find({ "gradlew", ".git", "mvnw" }, { upward = true })[1]),
+
     settings = {
         java = {
-            signatureHelp = {
-                enabled = true,
-            },
+            signatureHelp = { enabled = true },
             sources = {
                 organizeImports = {
                     starThreshold = 9999,
@@ -22,24 +22,19 @@ local config = {
             },
         },
     },
-    capabilities = {
-        workspace = {
-            configuration = true,
-        },
-        textDocument = {
-            completion = {
-                completionItem = {
-                    snippentSupport = true,
+    capabilities = vim.tbl_deep_extend(
+        "force",
+        vim.lsp.protocol.make_client_capabilities(),
+        require("cmp_nvim_lsp").default_capabilities({
+            workspace = { configuration = true },
+            textDocument = {
+                completion = {
+                    completionItem = {
+                        snippetSupport = true,
+                    },
                 },
             },
-        },
-    },
+        })
+    ),
 }
-config.capabilities = vim.tbl_deep_extend(
-    "force",
-    vim.lsp.protocol.make_client_capabilities(),
-    require("cmp_nvim_lsp").default_capabilities()
-)
-
--- config.capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-require("jdtls").start_or_attach(config)
+jdtls.start_or_attach(config)
