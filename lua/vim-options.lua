@@ -11,6 +11,8 @@ vim.opt.listchars:append("trail:·")
 vim.opt.listchars:append("tab:▏ ")
 vim.opt.listchars:append("nbsp:␣")
 
+vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
+
 ---------------relative line numbers---------------
 vim.cmd("set number relativenumber")
 function ToggleNumber()
