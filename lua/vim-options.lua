@@ -6,10 +6,10 @@ vim.cmd("set shiftwidth=4")
 
 vim.opt.list = true
 vim.opt.listchars:append("space:·")
-vim.opt.listchars:append("eol:↴")
+-- vim.opt.listchars:append("eol:↴")
 vim.opt.listchars:append("trail:·")
 vim.opt.listchars:append("tab:▏ ")
-vim.opt.listchars:append("nbsp:␣")
+-- vim.opt.listchars:append("nbsp:␣")
 
 vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
 
