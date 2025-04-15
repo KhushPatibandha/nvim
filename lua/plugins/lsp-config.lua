@@ -47,31 +47,6 @@ return {
                 },
             })
 
-            lspconfig.rust_analyzer.setup({
-                capabilities = capabilities,
-                cmd = { "/run/current-system/sw/bin/rust-analyzer" },
-                filetypes = { "rust" },
-                root_dir = lspconfig.util.root_pattern("Cargo.toml", ".git"),
-                settings = {
-                    ["rust-analyzer"] = {
-                        cargo = {
-                            allFeatures = true,
-                            buildScripts = { enable = true },
-                            loadOutDirsFromCheck = true,
-                        },
-                        imports = { granularity = { group = "module" } },
-                        procMacro = { enable = true },
-                        rustfmt = { extraArgs = { "--edition", "2021" } },
-                        checkOnSave = {
-                            enable = true,
-                            command = "cargo-clippy", -- Optional but may help in some projects
-                        },
-                        diagnostics = { enable = true },
-                        completion = { autoImport = { snable = true } },
-                    },
-                },
-            })
-
             -- vim.keymap.set(
             --     "n",
             --     "<leader>gr",

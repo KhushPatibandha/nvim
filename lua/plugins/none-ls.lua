@@ -20,9 +20,6 @@ return {
                 null_ls.builtins.formatting.black.with({
                     command = "/run/current-system/sw/bin/black",
                 }),
-                require("none-ls.formatting.rustfmt").with({
-                    command = "/run/current-system/sw/bin/rustfmt",
-                }),
                 require("none-ls.diagnostics.ruff").with({
                     command = "/run/current-system/sw/bin/ruff",
                 }),
@@ -50,6 +47,9 @@ return {
                 }),
                 null_ls.builtins.code_actions.impl.with({
                     command = "/run/current-system/sw/bin/impl",
+                }),
+                null_ls.builtins.completion.spell.with({
+                    filetypes = { "text", "markdown" },
                 }),
             },
         })
