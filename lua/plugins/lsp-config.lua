@@ -28,18 +28,6 @@ return {
                 },
             })
 
-            lspconfig.pyright.setup({
-                capabilities = capabilities,
-                cmd = { "/run/current-system/sw/bin/pyright-langserver", "--stdio" },
-                settings = {
-                    python = {
-                        analyses = {
-                            typeCheckingMode = "strict",
-                        },
-                    },
-                },
-            })
-
             -- vim.keymap.set(
             --     "n",
             --     "<leader>gr",

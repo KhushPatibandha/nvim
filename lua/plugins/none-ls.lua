@@ -11,15 +11,6 @@ return {
                 null_ls.builtins.formatting.stylua.with({
                     command = "/run/current-system/sw/bin/stylua",
                 }),
-                null_ls.builtins.diagnostics.mypy.with({
-                    command = "/run/current-system/sw/bin/mypy",
-                }),
-                null_ls.builtins.formatting.black.with({
-                    command = "/run/current-system/sw/bin/black",
-                }),
-                require("none-ls.diagnostics.ruff").with({
-                    command = "/run/current-system/sw/bin/ruff",
-                }),
                 null_ls.builtins.formatting.google_java_format.with({
                     command = "/run/current-system/sw/bin/google-java-format",
                     extra_args = { "--aosp" },
