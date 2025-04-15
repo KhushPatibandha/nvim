@@ -11,9 +11,6 @@ return {
                 null_ls.builtins.formatting.stylua.with({
                     command = "/run/current-system/sw/bin/stylua",
                 }),
-                null_ls.builtins.formatting.prettier.with({
-                    command = "/run/current-system/sw/bin/prettierd",
-                }),
                 null_ls.builtins.diagnostics.mypy.with({
                     command = "/run/current-system/sw/bin/mypy",
                 }),
@@ -22,9 +19,6 @@ return {
                 }),
                 require("none-ls.diagnostics.ruff").with({
                     command = "/run/current-system/sw/bin/ruff",
-                }),
-                require("none-ls.diagnostics.eslint_d").with({
-                    command = "/run/current-system/sw/bin/eslint_d",
                 }),
                 null_ls.builtins.formatting.google_java_format.with({
                     command = "/run/current-system/sw/bin/google-java-format",
