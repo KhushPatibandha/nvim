@@ -28,6 +28,18 @@ return {
                 },
             })
 
+            lspconfig.ts_ls.setup({
+                capabilities = capabilities,
+                cmd = { "/run/current-system/sw/bin/typescript-language-server", "--stdio" },
+                filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+                root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json", ".git"),
+                init_options = {
+                    preferences = {
+                        disableSuggestions = true,
+                    },
+                },
+            })
+
             -- vim.keymap.set(
             --     "n",
             --     "<leader>gr",

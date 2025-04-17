@@ -8,13 +8,18 @@ return {
 
         null_ls.setup({
             sources = {
+                -- lua
                 null_ls.builtins.formatting.stylua.with({
                     command = "/run/current-system/sw/bin/stylua",
                 }),
+
+                -- java
                 null_ls.builtins.formatting.google_java_format.with({
                     command = "/run/current-system/sw/bin/google-java-format",
                     extra_args = { "--aosp" },
                 }),
+
+                -- golang
                 null_ls.builtins.formatting.gofmt.with({
                     command = "/run/current-system/sw/bin/gofmt",
                 }),
@@ -33,6 +38,13 @@ return {
                 null_ls.builtins.code_actions.impl.with({
                     command = "/run/current-system/sw/bin/impl",
                 }),
+
+                -- js-ts
+                require("none-ls.diagnostics.eslint_d").with({
+                    command = "/run/current-system/sw/bin/eslint_d",
+                }),
+
+                -- text
                 null_ls.builtins.completion.spell.with({
                     filetypes = { "text", "markdown" },
                 }),
