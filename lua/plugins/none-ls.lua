@@ -39,11 +39,6 @@ return {
                     command = "/run/current-system/sw/bin/impl",
                 }),
 
-                -- js-ts
-                require("none-ls.diagnostics.eslint_d").with({
-                    command = "/run/current-system/sw/bin/eslint_d",
-                }),
-
                 -- text
                 null_ls.builtins.completion.spell.with({
                     filetypes = { "text", "markdown" },
