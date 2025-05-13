@@ -39,6 +39,12 @@ return {
                     command = "/run/current-system/sw/bin/impl",
                 }),
 
+                -- c/cpp
+                null_ls.builtins.formatting.clang_format.with({
+                    command = "/run/current-system/sw/bin/clang-format",
+                    extra_args = { "--style={IndentWidth: 4}" },
+                }),
+
                 -- text
                 null_ls.builtins.completion.spell.with({
                     filetypes = { "text", "markdown" },

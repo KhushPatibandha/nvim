@@ -28,6 +28,11 @@ return {
                 },
             })
 
+            lspconfig.clangd.setup({
+                capabilities = capabilities,
+                cmd = { "/run/current-system/sw/bin/clangd" },
+            })
+
             -- vim.keymap.set(
             --     "n",
             --     "<leader>gr",
