@@ -33,6 +33,21 @@ return {
                 cmd = { "/run/current-system/sw/bin/clangd" },
             })
 
+            lspconfig.hls.setup({
+                capabilities = capabilities,
+                settings = {
+                    haskell = {
+                        formattingProvider = "fourmolu",
+                        hlintOn = true,
+                        plugins = {
+                            ormolu = { enable = false },
+                            hlint = { enable = true },
+                        },
+                    },
+                },
+                -- cmd = { "/run/current-system/sw/bin/haskell-language-server-wrapper" },
+            })
+
             -- vim.keymap.set(
             --     "n",
             --     "<leader>gr",
