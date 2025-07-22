@@ -60,8 +60,8 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, desc = "Move f
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, desc = "Move focus to the upper window" })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, desc = "Move focus to the left window" })
 
-vim.keymap.set("v", "<C-down>", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "<C-up>", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("x", "<Leader>p", '"_dP')
 vim.keymap.set(
@@ -73,9 +73,6 @@ vim.keymap.set(
 
 vim.keymap.set("n", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
-
-vim.keymap.set("n", "<C-a>", "gg0VG$")
-vim.keymap.set("i", "<C-a>", "<ESC>gg0VG$")
 
 vim.keymap.set("n", "<C-/>", ":Commentary<CR>", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-/>", ":Commentary<CR>", { noremap = true, silent = true })
