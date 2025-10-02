@@ -21,3 +21,9 @@ local colorscheme_file = vim.fn.stdpath("config") .. "/colorscheme.lua"
 if vim.loop.fs_stat(colorscheme_file) then
     vim.cmd("luafile " .. colorscheme_file)
 end
+
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "StatusLine", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "#000000" })
+-- vim.api.nvim_set_hl(0, "VertSplit", { bg = "#000000" })

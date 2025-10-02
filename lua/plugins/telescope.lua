@@ -46,7 +46,7 @@ return {
                             -- Save the colorscheme choice to a file
                             local colorscheme_file = vim.fn.stdpath("config") .. "/colorscheme.lua"
                             vim.fn.writefile(
-                                { string.format("vim.cmd('colorscheme %s')", selection.value) },
+                                { string.format('vim.cmd("colorscheme %s")', selection.value) },
                                 colorscheme_file
                             )
                         end)
