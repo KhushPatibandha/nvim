@@ -78,6 +78,13 @@ vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
 vim.keymap.set("n", "<C-/>", ":Commentary<CR>", { noremap = true, silent = true })
 vim.keymap.set("v", "<C-/>", ":Commentary<CR>", { noremap = true, silent = true })
 
+vim.keymap.set("n", "k", "kzz", { noremap = true, silent = true })
+vim.keymap.set("v", "k", "kzz", { noremap = true, silent = true })
+vim.keymap.set("n", "j", "jzz", { noremap = true, silent = true })
+vim.keymap.set("v", "j", "jzz", { noremap = true, silent = true })
+vim.keymap.set("n", "G", "Gzz", { noremap = true, silent = true })
+vim.keymap.set("v", "G", "Gzz", { noremap = true, silent = true })
+
 -- Auto format on save
 vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format({async = false})]])
 
