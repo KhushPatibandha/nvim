@@ -1,1 +1,1 @@
-vim.cmd("colorscheme base16-gruber")
+vim.cmd("colorscheme base24-dracula")
