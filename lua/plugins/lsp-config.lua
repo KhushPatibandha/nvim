@@ -29,6 +29,11 @@ return {
             vim.lsp.config("clangd", {
                 capabilities = capabilities,
                 cmd = { "/run/current-system/sw/bin/clangd" },
+
+                on_attach = function(client)
+                    client.server_capabilities.documentFormattingProvider = false
+                    client.server_capabilities.documentRangeFormattingProvider = false
+                end,
             })
 
             vim.lsp.config("hls", {

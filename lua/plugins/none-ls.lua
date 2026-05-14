@@ -42,7 +42,7 @@ return {
                 -- c/cpp
                 null_ls.builtins.formatting.clang_format.with({
                     command = "/run/current-system/sw/bin/clang-format",
-                    extra_args = { "--style={IndentWidth: 4}" },
+                    extra_args = { "--style={BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4, UseTab: Never}" },
                 }),
 
                 -- text
